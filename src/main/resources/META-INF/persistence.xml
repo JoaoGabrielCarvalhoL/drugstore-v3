@@ -6,6 +6,7 @@
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     
     <!-- Mapping Entities -->
+    
    
        <properties>
             <!-- JPA 3.x -->
