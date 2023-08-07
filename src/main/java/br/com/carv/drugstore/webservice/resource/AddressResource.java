@@ -12,7 +12,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/zip-query")
+@Path("/query")
 @Produces(MediaType.APPLICATION_JSON)
 public class AddressResource {
 	
@@ -20,7 +20,7 @@ public class AddressResource {
 	@Path("/{cep}")
 	public AddressResponse getAddressByCep(@PathParam("cep") String cep) {
 		ResteasyClient resteasyClient = (ResteasyClient) ResteasyClientBuilder.newClient(); 
-		ResteasyWebTarget resteasyWebTarget = resteasyClient.target(String.format("https://viacep.com.br/ws/%s/json", cep));	
+		ResteasyWebTarget resteasyWebTarget = resteasyClient.target(String.format("https://viacep.com.br/ws/%s/json", cep));
 		
 		Response response = resteasyWebTarget.request(MediaType.APPLICATION_JSON).get();
 		AddressResponse address = (AddressResponse) response.getEntity();
@@ -28,3 +28,5 @@ public class AddressResource {
 	}
 
 }
+
+//http://127.0.0.1:8080/Drugstore/zip/query/19930086

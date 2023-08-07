@@ -14,7 +14,7 @@ public class User extends GenericEntity {
 	@Serial
 	private static final long serialVersionUID = 0L;
 	
-	@Column(nullable = false, length = 150)
+	@Column(nullable = false, length = 150, name = "name_user")
 	private String name; 
 	
 	@Column(nullable = false, unique = true)

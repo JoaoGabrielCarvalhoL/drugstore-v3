@@ -24,6 +24,7 @@ public class PersistenceConfig {
 			entityManagerFactory = Persistence.createEntityManagerFactory("drugstore");
 		} catch (Exception e) {
 			logger.info("Entity Manager Factory cannot be created.");
+			e.printStackTrace();
 			throw new RuntimeException();
 		}
 	}

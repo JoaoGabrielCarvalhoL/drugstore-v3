@@ -27,6 +27,24 @@ public class AddressResponse {
     
     public AddressResponse() { }
 
+	public AddressResponse(String zipCode, String publicPlace, String complement, String neighborhood, String locality,
+			String federativeUnit, String brazilianInstituteGeographyStatistics, String gia, String directRemoteDialing,
+			String integratedFinancialManagementSystemFederalGovernment) {
+		super();
+		this.zipCode = zipCode;
+		this.publicPlace = publicPlace;
+		this.complement = complement;
+		this.neighborhood = neighborhood;
+		this.locality = locality;
+		this.federativeUnit = federativeUnit;
+		this.brazilianInstituteGeographyStatistics = brazilianInstituteGeographyStatistics;
+		this.gia = gia;
+		this.directRemoteDialing = directRemoteDialing;
+		this.integratedFinancialManagementSystemFederalGovernment = integratedFinancialManagementSystemFederalGovernment;
+	}
+
+
+
 	public String getZipCode() {
 		return zipCode;
 	}
