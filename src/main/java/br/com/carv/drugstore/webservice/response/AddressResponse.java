@@ -1,5 +1,6 @@
 package br.com.carv.drugstore.webservice.response;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AddressResponse {
@@ -27,6 +28,7 @@ public class AddressResponse {
     
     public AddressResponse() { }
 
+    @JsonCreator
 	public AddressResponse(String zipCode, String publicPlace, String complement, String neighborhood, String locality,
 			String federativeUnit, String brazilianInstituteGeographyStatistics, String gia, String directRemoteDialing,
 			String integratedFinancialManagementSystemFederalGovernment) {
